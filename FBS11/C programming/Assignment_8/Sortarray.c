@@ -9,12 +9,12 @@ int main(){
 }
 void sortarray(int*a,int n){
 	int temp;
-	for(int i=0;i<n;i++){
+	for(int i=1;i<=n;i++){
 		for(int j=0;j<n-i;j++){
 			if(a[j]>a[j+1]){
 				temp=a[j];
-				a[j]=a[i];
-				a[i]=temp;
+				a[j]=a[j+1];
+				a[j+1]=temp;
 			}
 		}
 	}
