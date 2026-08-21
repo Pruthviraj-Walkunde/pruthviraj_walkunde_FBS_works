@@ -9,7 +9,7 @@ int mystrcmp(char*,char*);
 int mystrncmp(char*,char*,int);
 char* mystrchr(char*,char);
 char* mystrrchr(char*,char);
-//char*mystrstr(char*,char*);//
+char*mystrstr(char*,char*);
 int mytoupper(int);
 int mytolower(int);
 void mystrupper(char*);
