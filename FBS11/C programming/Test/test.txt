@@ -1,0 +1,108 @@
+Name:Pruthviraj Walkunde
+FRN NO:16j0726/038
+set:B
+
+
+
+#include<stdio.h>
+int getcount(char*);
+int main(){
+	char str[]="Hello friende in firstbit";
+	printf("%d ",getcount(str));
+	
+}
+int getcount(char* str){
+	int i=0,count=1;
+	while(str[i]!='\0'){
+		if(str[i]==' '){
+			count++;
+		}
+		i++;
+	}
+	return i;
+}
+
+
+
+
+#include<stdio.h>
+int main(){
+	int n,i;
+	unsigned int no=1;
+	printf("Enter any number: ");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++){
+		
+		printf("%d\n",no);
+		no=no*10+1;
+	}
+}
+
+
+
+
+#include<stdio.h>
+struct song{
+	int song_id;
+	char song_title[30];
+	char song_art[30];
+	int song_len;
+	struct song*next;
+};
+struct song *songs=NULL;
+struct song*temp;
+void add(){
+	if(songs==NULL){
+		songs=(struct song*)malloc(sizeof(struct song));
+		songs->next=NULL;
+		printf("Enter song ID:");
+		scanf("%d",&songs->song_id);
+		printf("Enter song TITLE:");
+		scanf("%s",songs->song_title);
+		printf("Enter song Artist:");
+		scanf("%s",songs->song_art);
+		printf("Enter song Length in (min,sec):");
+		scanf("%d",&songs->song_len);
+	
+	}
+	else{
+		temp=(struct song*)malloc(sizeof(struct song));
+		temp->next=NULL;
+		next=temp;
+		
+		printf("Enter song ID:");
+		scanf("%d",&next->song_id);
+		printf("Enter song TITLE:");
+		scanf("%s",next->song_title);
+		printf("Enter song Artist:");
+		scanf("%s",next->song_art);
+		printf("Enter song Length in (min,sec):")
+		scanf("%d",&next->song_len);
+		
+	}
+	
+	void display(){
+		if(songs==NULL){
+			printf("Not song found..");
+		}
+		else{
+			printf("display");
+		}
+	}
+	
+int main(){
+	int ch;
+	do{
+		printf("\nSong page\n");
+		printf("1.addsong\n2.displaysong\n3.Exit");
+		scanf("%d",&ch);
+		switch(ch){
+			case 1:add();break;
+			case 2:display();break;
+			case 3:printf("Ended");
+			default:printf("Invalid choice"),
+		}
+		
+	}switch(ch!=3);
+	
+}
